@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #000000, #0d0d0d);
+  border-bottom: 3px solid #d4af37; /* gold */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #00aeef; /* electric blue */
+  text-shadow: 0 0 8px #00aeefaa;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: #d4af37; /* gold */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #d4af37aa;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 3rem auto 5rem;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #00aeef;
+  color: #0a0a0a;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00aeef99;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2rem;
+  user-select: none;
+}
+
+.btn-primary:hover {
+  background: #d4af37; /* gold */
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #d4af37cc;
+}
+
+.portfolio {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.portfolio-item {
+  background: #121212;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px #000000aa;
+  color: #eee;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.portfolio-item:hover {
+  border-color: #d4af37; /* gold */
+  box-shadow: 0 0 20px #d4af37cc;
+  background: #1a1a1a;
+}
+
+.portfolio-item h3 {
+  margin-top: 0;
+  color: #00aeef;
+  text-shadow: 0 0 8px #00aeefaa;
+}
+
+.portfolio-item p {
+  color: #ccc;
+}
+
+.gold-link {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.gold-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #000000;
+  color: #555;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+  user-select: none;
+  border-top: 1px solid #222;
+}
