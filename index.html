@@ -5,39 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sharon’s Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
   <header>
-    <h1> Sharon’s Portfolio</h1>
-    <p>Creative Soul | Admin Boss | Storytelling Strategist</p>
+    <nav style="background:#000; padding:1rem 2rem; border-bottom:3px solid #d4af37; display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <a href="index.html" style="color:#d4af37; font-weight:700; font-size:1.4rem; text-decoration:none;">Sharon’s Portfolio</a>
+        <p style="color:#bbb; margin:0; font-size:0.9rem;">Creative Soul | Admin Boss | Storytelling Strategist</p>
+      </div>
+      <div>
+        <a href="index.html" style="color:#00aeef; margin-right:1.5rem; text-decoration:none; font-weight:600;">Home</a>
+        <a href="blog.html" style="color:#00aeef; margin-right:1.5rem; text-decoration:none; font-weight:600;">Blog</a>
+        <a href="https://www.linkedin.com/in/sharonmutanu" target="_blank" style="color:#d4af37; margin-right:1rem;">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://www.instagram.com/sha.ta.nu" target="_blank" style="color:#d4af37; margin-right:1rem;">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://wa.me/254115013612" target="_blank" style="color:#d4af37;">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </nav>
   </header>
 
-  <section class="intro">
-    <p>Helping people and businesses shine online with structure, clarity, and a little spark. Welcome to my digital home; sleek, bold, and just a little bit magical.</p>
-    <a href="blog.html" class="btn-primary" aria-label="Explore Blog">Explore My Blog →</a>
+  <section class="intro" style="max-width:900px; margin: 2rem auto; padding: 0 2rem; text-align:center;">
+    <p style="font-size:1.2rem; color:#ddd; line-height:1.6;">
+      Helping people and businesses shine online with structure, clarity, and a little spark. Welcome to my digital home; sleek, bold, and just a little bit magical.
+    </p>
+    <a href="blog.html" class="btn-primary" aria-label="Explore Blog" style="
+      display:inline-block;
+      margin-top:1.5rem;
+      background:#00aeef;
+      color:#000;
+      padding:0.7rem 1.2rem;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+    ">Explore My Blog →</a>
   </section>
 
-  <section class="portfolio" aria-label="Portfolio Highlights">
-    <article class="portfolio-item" tabindex="0">
-      <h3>Personal Website</h3>
-      <p><a href="https://shaas.github.io" target="_blank" class="gold-link">View Live Site</a></p>
+  <section class="portfolio" aria-label="Portfolio Highlights" style="max-width:900px; margin: 3rem auto; padding: 0 2rem;">
+    <article class="portfolio-item" tabindex="0" style="background:#1a1a1a; padding:1.5rem; margin-bottom:1.5rem; border-radius:12px; box-shadow: 0 0 10px rgba(212,175,55,0.5); color:#ccc;">
+      <h3 style="color:#d4af37;">Personal Website</h3>
+      <p><a href="https://shaas.github.io" target="_blank" class="gold-link" style="color:#d4af37; text-decoration:none;">View Live Site</a></p>
     </article>
 
-    <article class="portfolio-item" tabindex="0">
-      <h3>Design Samples</h3>
+    <article class="portfolio-item" tabindex="0" style="background:#1a1a1a; padding:1.5rem; margin-bottom:1.5rem; border-radius:12px; box-shadow: 0 0 10px rgba(212,175,55,0.5); color:#ccc;">
+      <h3 style="color:#d4af37;">Design Samples</h3>
       <p>Social posters, CVs, brand kits (available upon request).</p>
     </article>
 
-    <article class="portfolio-item" tabindex="0">
-      <h3>Writing Sample</h3>
+    <article class="portfolio-item" tabindex="0" style="background:#1a1a1a; padding:1.5rem; margin-bottom:1.5rem; border-radius:12px; box-shadow: 0 0 10px rgba(212,175,55,0.5); color:#ccc;">
+      <h3 style="color:#d4af37;">Writing Sample</h3>
       <p>“Writing My Way Through the Chaos” – a story of passion and hustle.</p>
     </article>
   </section>
 
-  <footer>
+  <footer style="text-align:center; padding:1rem 0; color:#888; border-top:1px solid #333; margin-top:4rem;">
     &copy; 2025 Mutanu — Let’s create something unforgettable.
   </footer>
 
   <script src="scripts.js"></script>
 </body>
-  </html>
+</html>
