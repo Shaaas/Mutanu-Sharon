@@ -152,6 +152,7 @@ nav {
 
 /* === PORTFOLIO & BLOG MAGAZINE STYLE === */
 .portfolio,
+   display: grid;
 .blog-grid {
   max-width: 1200px;
   margin: 4rem auto;
