@@ -314,3 +314,54 @@ footer {
     text-align: center;
   }
 }
+/* === HOMEPAGE PORTFOLIO GRID === */
+.portfolio {
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  padding: 0 1rem;
+}
+
+.portfolio-item {
+  background: #121212;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px #000000aa;
+  text-align: center;
+  color: #eee;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0 0 25px #d4af37cc;
+  transform: translateY(-5px);
+}
+
+.portfolio-item h3 {
+  color: #00aeef;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #00aeefaa;
+}
+
+.portfolio-item p {
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+/* Gold links inside portfolio */
+.portfolio-item .gold-link {
+  color: #d4af37;
+  text-decoration: none;
+}
+.portfolio-item .gold-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+}
