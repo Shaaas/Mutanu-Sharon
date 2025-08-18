@@ -8,7 +8,7 @@
 /* === BASE STYLES === */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0a0a0a;  /* super dark */
+  background: #0a0a0a;  
   color: #eee;
   overflow-x: hidden;
   line-height: 1.6;
@@ -16,23 +16,23 @@ body {
 
 /* LINKS */
 a {
-  color: #00aeef; /* electric blue */
+  color: #00aeef; 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover,
 a:focus {
-  color: #d4af37; /* gold */
+  color: #d4af37; 
   text-decoration: underline;
   outline: none;
 }
 
 /* === HEADER === */
 header {
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, #000000, #0d0d0d);
-  border-bottom: 3px solid #d4af37; /* gold */
+  border-bottom: 3px solid #d4af37; 
   position: sticky;
   top: 0;
   z-index: 100;
@@ -112,7 +112,7 @@ nav {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 5rem 2rem 6rem;
+  padding: 6rem 2rem 8rem;
   background: linear-gradient(135deg, #000000, #0a0a0a);
 }
 
@@ -122,14 +122,21 @@ nav {
 
 .hero-content h1 {
   margin-bottom: 1rem;
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #00aeef;
   text-shadow: 0 0 8px #00aeefaa;
 }
 .hero-content p {
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #ccc;
+  line-height: 1.8;
+}
+
+/* Centering the button perfectly */
+.hero-content .btn-primary {
+  margin: 0 auto;
+  display: inline-block;
 }
 
 /* === BUTTONS === */
@@ -143,7 +150,6 @@ nav {
   transition: background 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
 }
 .btn-primary:hover,
@@ -156,38 +162,41 @@ nav {
 
 /* === PORTFOLIO === */
 .portfolio {
-  max-width: 900px;
-  margin: 0 auto 4rem;
+  max-width: 1000px;
+  margin: 0 auto 6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
   padding: 0 1rem;
 }
 .portfolio-item {
   background: #121212;
   border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 0 8px #000000aa;
+  padding: 2rem;
+  box-shadow: 0 0 10px #000000aa;
   color: #eee;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   user-select: none;
   border: 2px solid transparent;
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
   border-color: #d4af37;
-  box-shadow: 0 0 20px #d4af37cc;
+  box-shadow: 0 0 25px #d4af37cc;
   background: #1a1a1a;
+  transform: translateY(-5px);
   outline: none;
 }
 .portfolio-item h3 {
   color: #00aeef;
   text-shadow: 0 0 8px #00aeefaa;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 .portfolio-item p {
   color: #ccc;
+  font-size: 1rem;
 }
 
 /* Gold links */
@@ -204,7 +213,7 @@ footer {
   background: #000000;
   color: #555;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   font-size: 0.85rem;
   user-select: none;
   border-top: 1px solid #222;
@@ -225,12 +234,13 @@ footer {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 15px #000000bb;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   user-select: none;
 }
 .blog-post:hover {
   box-shadow: 0 0 25px #d4af37cc;
+  transform: translateY(-5px);
 }
 .blog-post img {
   width: 100%;
@@ -266,6 +276,15 @@ footer {
 }
 
 /* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.15rem;
+  }
+}
+
 @media (max-width: 600px) {
   nav {
     flex-direction: column;
@@ -273,5 +292,11 @@ footer {
   }
   .nav-links {
     gap: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1.05rem;
   }
 }
