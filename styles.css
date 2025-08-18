@@ -10,8 +10,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0a0a0a;
   color: #eee;
-  overflow-x: hidden;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* LINKS */
@@ -84,108 +84,124 @@ nav {
   color: #00aeef;
   font-weight: 600;
   font-size: 1rem;
-  text-decoration: none;
 }
 .nav-link:hover,
 .nav-link:focus {
   color: #d4af37;
-  text-decoration: underline;
-  outline: none;
 }
 .nav-icon {
   color: #d4af37;
   font-size: 1.5rem;
-  transition: color 0.3s ease;
   display: flex;
   align-items: center;
+  transition: color 0.3s ease;
 }
 .nav-icon:hover,
 .nav-icon:focus {
   color: #00aeef;
-  outline: none;
 }
 
 /* === INTRO SECTION === */
 .intro {
-  max-width: 800px;
+  max-width: 700px;
   margin: 5rem auto 4rem;
   padding: 0 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #ccc;
   text-align: center;
 }
-.intro p {
-  margin-bottom: 2rem;
+.intro .btn-wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* === BUTTONS === */
-.btn-primary {
-  background: #00aeef;
-  color: #0a0a0a;
+.btn-primary,
+.btn-secondary {
   font-weight: 700;
   padding: 0.75rem 2rem;
   border-radius: 30px;
   box-shadow: 0 0 15px #00aeef99;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  margin: 1.5rem auto 0;
-  display: inline-block;
   cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-primary {
+  background: #00aeef;
+  color: #0a0a0a;
 }
 .btn-primary:hover,
 .btn-primary:focus {
   background: #d4af37;
   color: #0a0a0a;
   box-shadow: 0 0 20px #d4af37cc;
-  outline: none;
+}
+.btn-secondary {
+  background: #d4af37;
+  color: #0a0a0a;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: #00aeef;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #00aeefcc;
 }
 
-/* === PORTFOLIO (Magazine Style) === */
-.portfolio {
+/* === PORTFOLIO & BLOG MAGAZINE STYLE === */
+.portfolio,
+.blog-grid {
   max-width: 1200px;
-  margin: 5rem auto;
+  margin: 4rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
   padding: 0 1rem;
 }
 
-.portfolio-item {
+.portfolio-item,
+.blog-post {
   background: #121212;
   border-radius: 12px;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   box-shadow: 0 0 12px #000000aa;
   color: #eee;
-  cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid transparent;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 .portfolio-item:hover,
-.portfolio-item:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 20px #d4af37cc;
-  background: #1a1a1a;
-  outline: none;
+.blog-post:hover {
+  box-shadow: 0 0 25px #d4af37cc;
+  transform: translateY(-5px);
 }
 
-.portfolio-item h3 {
+.portfolio-item h3,
+.blog-post h2 {
   color: #00aeef;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+  text-shadow: 0 0 8px #00aeefaa;
+  margin-bottom: 0.5rem;
 }
-
-.portfolio-item p {
+.portfolio-item p,
+.blog-post p {
   color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
+/* Gold links */
 .gold-link {
   color: #d4af37;
-  font-weight: 600;
+  text-decoration: none;
 }
 .gold-link:hover {
   text-decoration: underline;
@@ -197,63 +213,65 @@ nav {
 .testimonials,
 .contact {
   max-width: 900px;
-  margin: 5rem auto;
+  margin: 4rem auto;
   padding: 2rem 1rem;
+  background: #121212;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #000000aa;
   text-align: center;
 }
-
 .about h2,
 .skills h2,
 .testimonials h2,
 .contact h2 {
   color: #00aeef;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-
 .about p,
 .skills p,
 .testimonials p,
 .contact p {
   color: #ccc;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
-/* === SKILLS SECTION === */
-.skills .skill-list {
+/* === SKILLS === */
+.skills-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.skills .skill-item {
-  background: #121212;
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #000000aa;
-  color: #eee;
+.skills-list li {
+  background: #222;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #d4af37;
   font-weight: 600;
+  list-style: none;
+  box-shadow: 0 0 8px #000000aa;
 }
 
-/* === TESTIMONIALS === */
-.testimonials .testimonial-list {
+/* === TESTIMONIALS / WHAT PEOPLE SAY === */
+.testimonials-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
-.testimonials .testimonial-item {
-  background: #121212;
+.testimonial {
+  background: #1a1a1a;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px #000000aa;
-  color: #eee;
-  text-align: center;
+  box-shadow: 0 0 12px #000000aa;
+  color: #ccc;
 }
 
-/* === LET’S WORK TOGETHER === */
-.contact .btn-primary {
-  margin-top: 1rem;
+/* === CONTACT / LET'S WORK TOGETHER === */
+.contact .btn-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 /* === FOOTER === */
@@ -261,8 +279,9 @@ footer {
   background: #000000;
   color: #555;
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 1rem 2rem;
   font-size: 0.85rem;
+  user-select: none;
   border-top: 1px solid #222;
 }
 
@@ -271,18 +290,27 @@ footer {
   .intro,
   .about,
   .skills,
-  .portfolio,
   .testimonials,
   .contact {
-    margin: 3rem auto;
+    margin: 3rem 1rem;
+    padding: 1.5rem;
   }
-
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  .portfolio,
+  .blog-grid {
+    grid-template-columns: 1fr;
   }
+}
 
-  .nav-links {
-    gap: 1rem;
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
   }
 }
