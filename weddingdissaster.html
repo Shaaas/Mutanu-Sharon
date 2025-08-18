@@ -74,9 +74,58 @@
     .back-link:hover {
       background-color: #e6c200;
     }
+    .share-buttons {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+}
+
+.share-buttons p {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.share-buttons a {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background: gold;
+  transition: 0.3s ease;
+}
+
+.share-buttons a:hover {
+  background: #0077ff; /* electric blue */
+  color: white;
+}
+
   </style>
 </head>
 <body>
+  <div class="share-buttons">
+  <p>📢 Share this article:</p>
+  <a id="whatsapp" target="_blank" class="whatsapp">WhatsApp</a>
+  <a id="twitter" target="_blank" class="twitter">Twitter</a>
+  <a id="facebook" target="_blank" class="facebook">Facebook</a>
+  <a id="linkedin" target="_blank" class="linkedin">LinkedIn</a>
+</div>
+
+<script>
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("whatsapp").href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+  document.getElementById("twitter").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+  document.getElementById("facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  document.getElementById("linkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+</script>
+
   <div class="sticky-header">This is not my story...</div>
 
   <div class="container">
