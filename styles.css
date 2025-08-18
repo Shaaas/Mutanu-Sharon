@@ -319,7 +319,7 @@ footer {
 }
 /* === PORTFOLIO HIGHLIGHTS === */
 .portfolio-highlights,
-.portfolio {
+.portfolio-highlights {
   max-width: 1200px;
   margin: 4rem auto;
   padding: 0 1rem;
