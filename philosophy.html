@@ -1,192 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Philosophy of Life</title>
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #0a0a0a;
-    color: #eee;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-  }
-
-  .blog-article {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 2rem 1.5rem;
-    background: #121212;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #000000bb;
-    color: #ccc;
-    font-size: 1.1rem;
-    text-align: justify;
-  }
-
-  .blog-article p {
-    margin-bottom: 1.8rem;
-    text-indent: 1.2rem;
-  }
-
-  .blog-article h2,
-  .blog-article h3 {
-    color: #00aeef;
-    text-align: center;
-    margin: 2rem 0 1rem;
-    text-shadow: 0 0 6px #00aeefaa;
-  }
-
-  .blog-article a {
-    color: #d4af37;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .blog-article a:hover {
-    color: #00aeef;
-    text-decoration: underline;
-  }
-
-  .blog-article blockquote {
-    border-left: 4px solid #d4af37;
-    padding-left: 1rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: #eee;
-    background: rgba(212, 175, 55, 0.05);
-    border-radius: 6px;
-  }
-
-  .blog-article p:first-of-type::first-letter {
-    float: left;
-    font-size: 3rem;
-    line-height: 1;
-    margin-right: 0.1em;
-    color: #00aeef;
-    font-weight: 700;
-  }
-
-  .blog-article img {
-    width: 100%;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-    display: block;
-    box-shadow: 0 0 15px #000000aa;
-  }
-
-  @media (max-width: 480px) {
-    .blog-article {
-      padding: 1rem;
-      font-size: 1rem;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Disaster Story</title>
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #000;
+      color: #00ffff; /* electric blue for main text */
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
     }
-  }
-  }
-</style>
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #000;
+      color: gold;
+      padding: 1rem 1rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid gold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: gold;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    ul {
+      margin: 1rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      background-color: #000;
+      color: gold;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      border-top: 2px solid gold;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1rem;
+      background-color: gold;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .back-link:hover {
+      background-color: #e6c200;
+    }
+    .share-buttons {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+}
+
+.share-buttons p {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.share-buttons a {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background: gold;
+  transition: 0.3s ease;
+}
+
+.share-buttons a:hover {
+  background: #0077ff; /* electric blue */
+  color: white;
+}
+
+  </style>
 </head>
 <body>
-  <div class="blog-article">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Philosophy of Life</title>
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #0a0a0a;
-    color: #eee;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
+  <div class="share-buttons">
+  <p>📢 Share this article:</p>
+  <a id="whatsapp" target="_blank" class="whatsapp">WhatsApp</a>
+  <a id="twitter" target="_blank" class="twitter">Twitter</a>
+  <a id="facebook" target="_blank" class="facebook">Facebook</a>
+  <a id="linkedin" target="_blank" class="linkedin">LinkedIn</a>
+</div>
 
-  .blog-article {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 2rem 1.5rem;
-    background: #121212;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #000000bb;
-    color: #ccc;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    column-count: 2;
-    column-gap: 3rem;
-    text-align: justify;
-  }
+<script>
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
 
-  .blog-article p {
-    margin-bottom: 1.5rem;
-    break-inside: avoid;
-    text-indent: 1.2rem;
-  }
+  document.getElementById("whatsapp").href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+  document.getElementById("twitter").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+  document.getElementById("facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  document.getElementById("linkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+</script>
 
-  .blog-article h2,
-  .blog-article h3 {
-    color: #00aeef;
-    text-align: center;
-    margin: 2rem 0 1rem;
-    text-shadow: 0 0 6px #00aeefaa;
-    break-after: avoid;
-  }
+  <div class="sticky-header">This is not my story...</div>
 
-  .blog-article a {
-    color: #d4af37;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .blog-article a:hover {
-    color: #00aeef;
-    text-decoration: underline;
-  }
-
-  .blog-article blockquote {
-    border-left: 4px solid #d4af37;
-    padding-left: 1rem;
-    margin: 2rem 0;
-    font-style: italic;
-    color: #eee;
-    background: rgba(212, 175, 55, 0.05);
-    border-radius: 6px;
-  }
-
-  .blog-article p:first-of-type::first-letter {
-    float: left;
-    font-size: 3rem;
-    line-height: 1;
-    margin-right: 0.1em;
-    color: #00aeef;
-    font-weight: 700;
-  }
-
-  .blog-article img {
-    width: 100%;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-    display: block;
-    box-shadow: 0 0 15px #000000aa;
-  }
-
-  @media (max-width: 1024px) {
-    .blog-article {
-      column-count: 1;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .blog-article {
-      padding: 1rem;
-      font-size: 1rem;
-    }
-  }
-</style>
-</head>
-<body>
+  <div class="container">
   <div class="blog-article">
     <p>Life is a river, carrying each of us in its relentless current, sometimes gentle, sometimes violent, always moving. From the first breath to the last, we are travelers navigating an intricate landscape of experiences, emotions, decisions, and consequences. Philosophy is the companion that walks beside us, offering guidance not by providing rigid answers but by shaping the way we perceive, interpret, and engage with the world. It transforms ordinary existence into a canvas of reflection and understanding, turning the mundane into meaningful and occasionally pointing out that your neighbor’s new lawn gnome is a metaphor for something you’ll never fully grasp.</p>  
 
