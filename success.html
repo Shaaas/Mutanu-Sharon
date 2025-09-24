@@ -7,88 +7,125 @@
   <style>
     /* === BASE STYLES === */
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #0a0a0a;
-      color: #eee;
-      line-height: 1.7;
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #000;
+      color: #00ffff; /* electric blue for main text */
       margin: 0;
-      padding: 0 1rem;
+      padding: 0;
+      line-height: 1.7;
     }
-    a {
-      color: #00aeef;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #d4af37;
-    }
-    header {
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #000;
+      color: gold;
+      padding: 1rem 1rem;
+      font-size: 1.8rem;
+      font-weight: bold;
       text-align: center;
-      padding: 3rem 1rem 1rem;
+      z-index: 1000;
+      border-bottom: 2px solid gold;
     }
-    header h1 {
-      font-size: 2.5rem;
-      color: #00aeef;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #d4af37;
-    }
-    .btn-home {
-      display: inline-block;
-      margin: 2rem 0;
-      padding: 0.75rem 2rem;
-      background: #00aeef;
-      color: #0a0a0a;
-      border-radius: 30px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.3s, box-shadow 0.3s;
-    }
-    .btn-home:hover {
-      background: #d4af37;
-      box-shadow: 0 0 20px #d4af37cc;
-    }
-    article {
+
+    .container {
       max-width: 900px;
       margin: 2rem auto;
+      padding: 0 1rem;
     }
-    article h2 {
-      color: #00aeef;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
+
+    h2 {
+      color: gold;
+      margin-top: 2rem;
+      font-size: 1.5rem;
     }
-    article p {
-      margin-bottom: 1.5rem;
-      color: #ccc;
+
+    p {
+      margin: 1rem 0;
     }
+
+    ul {
+      margin: 1rem 0 1rem 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
     footer {
+      background-color: #000;
+      color: gold;
       text-align: center;
-      padding: 2rem 1rem;
-      color: #555;
-      border-top: 1px solid #222;
-      margin-top: 4rem;
+      padding: 1rem;
+      margin-top: 3rem;
+      border-top: 2px solid gold;
     }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .btn-home {
-        width: 100%;
-        text-align: center;
-      }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1rem;
+      background-color: gold;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
     }
+
+    .back-link:hover {
+      background-color: #e6c200;
+    }
+    .share-buttons {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  border-top: 2px solid gold;
+  border-bottom: 2px solid gold;
+}
+
+.share-buttons p {
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.share-buttons a {
+  display: inline-block;
+  margin: 0.3rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  background: gold;
+  transition: 0.3s ease;
+}
+
+.share-buttons a:hover {
+  background: #0077ff; /* electric blue */
+  color: white;
+}
+
   </style>
 </head>
 <body>
-  <header>
-    <h1>Am I Overthinking Success, or Am I Defining It Right?</h1>
-    <p>A full reflection on understanding success your way.</p>
-    <a href="index.html" class="btn-home">Back to Home</a>
-  </header>
+  <div class="share-buttons">
+  <p>📢 Share this article:</p>
+  <a id="whatsapp" target="_blank" class="whatsapp">WhatsApp</a>
+  <a id="twitter" target="_blank" class="twitter">Twitter</a>
+  <a id="facebook" target="_blank" class="facebook">Facebook</a>
+  <a id="linkedin" target="_blank" class="linkedin">LinkedIn</a>
+</div>
+
+<script>
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById("whatsapp").href = `https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}`;
+  document.getElementById("twitter").href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+  document.getElementById("facebook").href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  document.getElementById("linkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+</script>
 
   <article>
     <p>I’ve been thinking about success a lot lately. It’s funny—ask ten people what success means, and you’ll probably get ten different answers. Some will keep it short and sharp: “It’s about hitting your goals.” Others will drift into long reflections about meaning, values, and fulfillment. And then there are people like me, who get told we’re overthinking it whenever we go too deep. But am I really overthinking, or just refusing to settle for the surface-level definition?</p>
